@@ -42,7 +42,7 @@ Je dois créer un tableau de 1000 entiers. Sa création peut être statique car 
 
 Je commence par récupérer la version assembleur du classique Hello World! fournit dans le pdf :
 
-```Assembleur
+```Assembly
 global main
 extern printf       ; utilisation de la fonction printf de la bibliothèque standard C
 
@@ -83,7 +83,7 @@ Je mets ensuite le code qui s'exécute à l'intérieur de ma boucle puis j'incr�
 
 Ce qui donne :
 
-```Assembleur
+```Assembly
     ; Initialisation de ebx à 0
     xor ebx, ebx
 
@@ -97,7 +97,7 @@ Ce qui donne :
 
 Ce qui donne le code :
 
-```Assembleur
+```Assembly
 global main
 extern printf       ; utilisation de la fonction printf de la bibliothèque standard C
 
@@ -139,7 +139,7 @@ main:
 
 J'ai `ebx` qui sert de compteur pour ma boucle. Pour calculer le modulo d'un nombre qui n'est pas une puissance de 2, il faut utiliser `div` (pour les puissances de 2, le `and` est plus efficace). Le dividende se trouve dans `edx:eax` et le diviseur est l'opérande attendu par `div`. Le quotient est enregistré dans `eax` et le reste dans `edx`. Je peux donc calculer comme ci-dessous :
 
-```Assembleur
+```Assembly
 mov eax, ebx    ; Je souhaite diviser le compteur (ici ebx)
 add eax, 1      ; auquel j'ai ajouté 1
 mov ecx, 7      ; par 7
@@ -149,7 +149,7 @@ div ecx         ; Le reste de la division du compteur par 7 est contenu dans edx
 
 J'ajoute ce nouveau contenu dans ma boucle, et créer une nouvelle boucle pour afficher le contenu du tableau. Enfin, j'augmente la taille du tableau ainsi que le nombre de tour dans la boucle et j'obtiens :
 
-```Assembleur
+```Assembly
 global main
 extern printf       ; utilisation de la fonction printf de la bibliothèque standard C
 

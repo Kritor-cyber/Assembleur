@@ -8,7 +8,7 @@ Challenge : https://www.root-me.org/fr/Challenges/Cracking/ELF-x86-CrackPass
 
 Niveau de difficulté : Moyen
 
-## Solution
+## Solution
 
 Le challenge met à notre disposition un exécutable nommé `Crack` auquel il faut fournir un mot de passe en argument. 
 
@@ -135,7 +135,7 @@ Et :
 
 Soit : `mdp`
 
-Mon mot de passe n'a pas été modifié, donc l'autre chaîne de caractères de j'ai récupéré est probablement le mot de passe en clair.
+Mon mot de passe n'a pas été modifié, donc l'autre chaîne de caractères que j'ai récupéré est probablement le mot de passe en clair.
 
 ```
 $ ./Crack ff0[...]ca9     

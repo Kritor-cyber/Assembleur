@@ -173,6 +173,9 @@ disas 0x08048104,... :
 ```
 
 Le programme affiche donc le texte "Enter the password: ", récupère l'entrée de l'utilisateur qu'il enregistre à l'adresse 0x8048251. Puis se rend à l'instruction `0x080480a8` qui saute à `0x80480ab`
+
+```Assembly
+0x080480ab:	mov    eax,0x30
 0x080480b0:	mov    ebx,0x5
 0x080480b5:	mov    ecx,0x8048138
 0x080480ba:	int    0x80
